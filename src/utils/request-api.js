@@ -147,6 +147,7 @@ function requestAPI (config, options, callback) {
     }
   })
   const req = request(config.protocol)({
+    protocol: config.protocol+':',
     hostname: config.host,
     path: `${config['api-path']}${options.path}?${qs}`,
     port: config.port,
